@@ -1,3 +1,5 @@
+
+// ROT13 ("rotate by 13 places")
 export function rot13(message){
   const alphaLower = [...'abcdefghijklmnopqrstuvwxyz'];
   const alphaUpper = [...'ABCDEFGHIJKLMNOPQRSTUVWXYZ'];
@@ -20,7 +22,22 @@ export function rot13(message){
   }, '')
 }
 
+// generates hashtag based on the input string
+// maximul length 140 characters
+export function generateHashtag(string) {
 
+   if (string == '') {
+    return false;
+  }
 
+  const words = string.split(' ').filter( word => word != '');
+  const hashtag =  words.reduce( (acc, word) => acc += word.charAt(0).toUpperCase() + word.slice(1), '#')
 
+  if (hashtag.length > 140 || hashtag == '#') {
+    return false
+  }
+
+  return hashtag;
+
+}
 
