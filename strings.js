@@ -1,4 +1,4 @@
-expor function rot13(message){
+export function rot13(message){
   const alphaLower = [...'abcdefghijklmnopqrstuvwxyz'];
   const alphaUpper = [...'ABCDEFGHIJKLMNOPQRSTUVWXYZ'];
 
@@ -19,3 +19,8 @@ expor function rot13(message){
     return acc;
   }, '')
 }
+
+
+
+
+
