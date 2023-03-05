@@ -23,7 +23,7 @@ export function rot13(message){
 }
 
 // generates hashtag based on the input string
-// maximul length 140 characters
+// maximul length 50 characters
 export function generateHashtag(string) {
 
    if (string == '') {
@@ -33,7 +33,7 @@ export function generateHashtag(string) {
   const words = string.split(' ').filter( word => word != '');
   const hashtag =  words.reduce( (acc, word) => acc += word.charAt(0).toUpperCase() + word.slice(1), '#')
 
-  if (hashtag.length > 140 || hashtag == '#') {
+  if (hashtag.length > 50 || hashtag == '#') {
     return false
   }
 
