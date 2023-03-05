@@ -7,3 +7,6 @@ Strings:
 
 Arrays:
 - Arrays intersection 
+- Arrays reunion 
+- Arrays difference 
+- Arrays exclusion 
